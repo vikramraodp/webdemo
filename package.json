@@ -1,0 +1,24 @@
+{
+  "name": "VirginiaWebDemo",
+  "version": "0.0.1",
+  "private": "true",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-pdf": "^1.2.2",
+    "jade": "*",
+    "nib": "*",
+    "stylus": "*",
+    "sync-request":"*",
+    "jsreport":"*",
+    "body-parser":"*"
+  },
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "exit 1"
+  },
+  "author": "",
+  "license": "",
+  "description": ""
+}

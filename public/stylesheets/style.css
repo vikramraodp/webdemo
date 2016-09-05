@@ -1,0 +1,391 @@
+/*
+ * Import nib
+ */
+/*
+ * Grab a custom font from Google
+ */
+@import url("http://fonts.googleapis.com/css?family=Quicksand");
+/*
+ * Nib provides a CSS reset
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+/*
+ * Store the main color and
+ * background color as variables
+ */
+html {
+  height: 100%;
+}
+body {
+  font-family: 'Georgia';
+  background-color: #faf9f0;
+  color: #444;
+  height: 100%;
+}
+header {
+  font-family: 'Quicksand';
+  padding: 25px 10px;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  background: -webkit-linear-gradient(left, #081026 0, #003478 60%, #0066a1 100%);
+  background: -moz-linear-gradient(left, #081026 0, #003478 60%, #0066a1 100%);
+  background: -o-linear-gradient(left, #081026 0, #003478 60%, #0066a1 100%);
+  background: -ms-linear-gradient(left, #081026 0, #003478 60%, #0066a1 100%);
+  background: linear-gradient(to right, #081026 0, #003478 60%, #0066a1 100%);
+  display: -webkit-box;
+/*
+   * Note the use of the `main-color`
+   * variable and the `darken` function
+   */
+  background-color: #a2bcff;
+  border-bottom: 1px solid #2562ff;
+}
+header h1 {
+  padding-left: 2%;
+  width: 50%;
+}
+.container {
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+}
+.main-content {
+  float: left;
+  width: 100%;
+  min-height: 100%;
+}
+.main-content p {
+  margin-bottom: 20px;
+}
+.main-content h1 {
+  font-family: 'Quicksand';
+  font-size: 20px;
+  font-weight: bold;
+  margin: 13px 10px 4px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ddd;
+  border-radius: 2px 2px 0px 0px;
+  margin-bottom: 10px;
+}
+.sidebar {
+  float: right;
+  width: 30%;
+}
+.sidebar .widget {
+/*
+     * Note the lack of vendor
+     * prefixes here. Nib will
+     * add them for us
+     */
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin-left: 20px;
+  background-color: #eee;
+  -webkit-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
+  box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
+}
+.sidebar .widget h1 {
+  font-family: 'Quicksand';
+  font-size: 20px;
+  font-weight: bold;
+  margin: 13px 10px 4px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ddd;
+  border-radius: 2px 2px 0px 0px;
+  margin-bottom: 10px;
+}
+.sidebar .widget p {
+  font-size: 13px;
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}
+p {
+  line-height: 1.8;
+}
+footer {
+  position: fixed;
+  width: 100%;
+  border-top: 1px dotted #ccc;
+  font-size: 14px;
+  background-color: #eee;
+  text-align: left;
+  bottom: 0px;
+  font-style: italic;
+}
+.notepad {
+  padding: 0 23px 14px 35px;
+  width: 100%;
+  min-width: 200px;
+  font: 16px/30px Cambria, Georgia, serif;
+  color: #282625;
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(#f6abca 1px, transparent 1px), -webkit-linear-gradient(#f6abca 1px, transparent 1px), -webkit-linear-gradient(#e8e8e8 1px, transparent 1px);
+  background-image: -moz-linear-gradient(#f6abca 1px, transparent 1px), -moz-linear-gradient(#f6abca 1px, transparent 1px), -moz-linear-gradient(#e8e8e8 1px, transparent 1px);
+  background-image: -o-linear-gradient(#f6abca 1px, transparent 1px), -o-linear-gradient(#f6abca 1px, transparent 1px), -o-linear-gradient(#e8e8e8 1px, transparent 1px);
+  background-image: -ms-linear-gradient(#f6abca 1px, transparent 1px), -ms-linear-gradient(#f6abca 1px, transparent 1px), -ms-linear-gradient(#e8e8e8 1px, transparent 1px);
+  background-image: linear-gradient(#f6abca 1px, transparent 1px), linear-gradient(#f6abca 1px, transparent 1px), linear-gradient(#e8e8e8 1px, transparent 1px);
+  -webkit-background-size: 1px 1px, 1px 1px, 30px 30px;
+  -moz-background-size: 1px 1px, 1px 1px, 30px 30px;
+  background-size: 1px 1px, 1px 1px, 30px 30px;
+  background-repeat: repeat-y, repeat-y, repeat;
+  background-position: 22px 0, 25px 0, 0 50px;
+  border: none;
+  overflow: auto;
+  outline: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.notepad-actions {
+  width: 100%;
+  min-width: 200px;
+  height: auto;
+  color: #282625;
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(#f6abca 1px, transparent 1px), -webkit-linear-gradient(#f6abca 1px, transparent 1px), -webkit-linear-gradient(#e8e8e8 1px, transparent 1px);
+  background-image: -moz-linear-gradient(#f6abca 1px, transparent 1px), -moz-linear-gradient(#f6abca 1px, transparent 1px), -moz-linear-gradient(#e8e8e8 1px, transparent 1px);
+  background-image: -o-linear-gradient(#f6abca 1px, transparent 1px), -o-linear-gradient(#f6abca 1px, transparent 1px), -o-linear-gradient(#e8e8e8 1px, transparent 1px);
+  background-image: -ms-linear-gradient(#f6abca 1px, transparent 1px), -ms-linear-gradient(#f6abca 1px, transparent 1px), -ms-linear-gradient(#e8e8e8 1px, transparent 1px);
+  background-image: linear-gradient(#f6abca 1px, transparent 1px), linear-gradient(#f6abca 1px, transparent 1px), linear-gradient(#e8e8e8 1px, transparent 1px);
+  -webkit-background-size: 1px 1px, 1px 1px, 30px 30px;
+  -moz-background-size: 1px 1px, 1px 1px, 30px 30px;
+  background-size: 1px 1px, 1px 1px, 30px 30px;
+  background-repeat: repeat-y, repeat-y, repeat;
+  background-position: 22px 0, 25px 0, 0 50px;
+  border: none;
+}
+.notepad-shadow {
+  width: 100%;
+  min-width: 200px;
+  height: 2px;
+  color: #282625;
+  background-color: #fff;
+  background-image: -webkit-linear-gradient(#f6abca 1px, transparent 1px), -webkit-linear-gradient(#f6abca 1px, transparent 1px), -webkit-linear-gradient(#e8e8e8 1px, transparent 1px);
+  background-image: -moz-linear-gradient(#f6abca 1px, transparent 1px), -moz-linear-gradient(#f6abca 1px, transparent 1px), -moz-linear-gradient(#e8e8e8 1px, transparent 1px);
+  background-image: -o-linear-gradient(#f6abca 1px, transparent 1px), -o-linear-gradient(#f6abca 1px, transparent 1px), -o-linear-gradient(#e8e8e8 1px, transparent 1px);
+  background-image: -ms-linear-gradient(#f6abca 1px, transparent 1px), -ms-linear-gradient(#f6abca 1px, transparent 1px), -ms-linear-gradient(#e8e8e8 1px, transparent 1px);
+  background-image: linear-gradient(#f6abca 1px, transparent 1px), linear-gradient(#f6abca 1px, transparent 1px), linear-gradient(#e8e8e8 1px, transparent 1px);
+  -webkit-background-size: 1px 1px, 1px 1px, 0 0;
+  -moz-background-size: 1px 1px, 1px 1px, 0 0;
+  background-size: 1px 1px, 1px 1px, 0 0;
+  background-repeat: repeat-y, repeat-y, repeat;
+  background-position: 22px 0, 25px 0, 0 50px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 0 4px rgba(0,0,0,0.5);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.15), 0 0 4px rgba(0,0,0,0.5);
+}
+.notepad-heading {
+  margin: 0 -11px 5px -17px;
+  height: 30px;
+  background: #14466a;
+  border-radius: 2px 2px 0 0;
+  background-image: -webkit--webkit-linear-gradient(top, #226797, #0c3452);
+  background-image: -webkit--moz-linear-gradient(top, #226797, #0c3452);
+  background-image: -webkit--o-linear-gradient(top, #226797, #0c3452);
+  background-image: -webkit--ms-linear-gradient(top, #226797, #0c3452);
+  background-image: -webkit-linear-gradient(to bottom, #226797, #0c3452);
+  background-image: -moz--webkit-linear-gradient(top, #226797, #0c3452);
+  background-image: -moz--moz-linear-gradient(top, #226797, #0c3452);
+  background-image: -moz--o-linear-gradient(top, #226797, #0c3452);
+  background-image: -moz--ms-linear-gradient(top, #226797, #0c3452);
+  background-image: -moz-linear-gradient(to bottom, #226797, #0c3452);
+  background-image: -o--webkit-linear-gradient(top, #226797, #0c3452);
+  background-image: -o--moz-linear-gradient(top, #226797, #0c3452);
+  background-image: -o--o-linear-gradient(top, #226797, #0c3452);
+  background-image: -o--ms-linear-gradient(top, #226797, #0c3452);
+  background-image: -o-linear-gradient(to bottom, #226797, #0c3452);
+  background-image: -webkit-linear-gradient(top, #226797, #0c3452);
+  background-image: -moz-linear-gradient(top, #226797, #0c3452);
+  background-image: -o-linear-gradient(top, #226797, #0c3452);
+  background-image: -ms-linear-gradient(top, #226797, #0c3452);
+  background-image: linear-gradient(to bottom, #226797, #0c3452);
+  -webkit-box-shadow: inset 0 1px #2f81ad, 0 2px 1px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,0,0,0.5), 0 1px #000;
+  -webkit-box-shadow: inset 0 1px #2f81ad, 0 2px 1px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,0,0,0.5), 0 1px #000;
+  box-shadow: inset 0 1px #2f81ad, 0 2px 1px rgba(0,0,0,0.4), 0 0 0 1px rgba(0,0,0,0.5), 0 1px #000;
+}
+.notepad-heading-before {
+  content: '';
+  bottom: 2px;
+  left: 1px;
+  right: 1px;
+  height: 0;
+  border-top: 1px dashed #617c90;
+  border-color: rgba(255,255,255,0.35);
+}
+.notepad-heading-after {
+  content: '';
+  bottom: 2px;
+  left: 1px;
+  right: 1px;
+  height: 0;
+  border-top: 1px dashed #617c90;
+  border-color: rgba(255,255,255,0.35);
+}
+.notepad-heading-h1 {
+  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 -1px rgba(0,0,0,0.7);
+}
+#virginiain {
+  width: 100%;
+  font-size: 18px;
+}
+#virginalbl {
+  background-color: #a2bcff;
+  font-size: 18px;
+  font-style: normal;
+}
+#speech {
+  display: inline-block;
+  overflow: hidden;
+  height: auto;
+  width: auto;
+  max-width: 24px;
+  max-height: 24px;
+}
+.actionbar {
+  padding: 0 40px 35px 10px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#process {
+  height: auto;
+  width: auto;
+  max-width: 24px;
+  max-height: 24px;
+  display: inline-block;
+  overflow: hidden;
+}
+.actionbutton {
+  height: auto;
+  width: auto;
+  max-width: 24px;
+  max-height: 24px;
+  display: inline-block;
+  overflow: hidden;
+}
+.divider {
+  width: 15px;
+  height: auto;
+  display: inline-block;
+}
+#philips_logo {
+  max-height: 20px;
+  vertical-align: middle;
+}
+#report {
+  width: 100%;
+  height: 100%;
+  min-height: 570px;
+}
+.loading {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  background: #e9e9e9 url("/images/wait.gif") 50% 50% no-repeat;
+}

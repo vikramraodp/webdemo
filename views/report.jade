@@ -1,0 +1,79 @@
+doctype
+html
+  head
+    title #{title} - Philips Healthtech
+    link(rel='stylesheet', href='/stylesheets/report.css')
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+
+  body
+    header
+      table.reportheader
+        tr
+          td
+            h1 Philips HealthTech
+          td.datedisplay
+            p#today Date:&nbsp
+
+    container
+      .main-content
+        block displayarea
+          br
+          .widget
+            h3.sectiontitle Patient Details:
+            table.reportcontent
+              tr
+                td
+                  p First Name:
+                td
+                  p #{first_name}
+              tr
+                td
+                  p Last Name:
+                td
+                  p #{last_name}
+              tr
+                td
+                  p Age:
+                td
+                  p #{age}
+              tr
+                td
+                  p Gender:
+                td
+                  p #{gender}
+              tr
+                td
+                  p Address:
+                td
+                  p #{address}
+
+          .widget
+            h3.sectiontitle Signs & Symtoms:
+            table.reportcontent
+              tr
+                td
+                  p #{signs_symptoms}
+
+          .widget
+            h3.sectiontitle Current Medication:
+            table.reportcontent
+              tr
+                td
+                  p #{current_medication}
+
+          .widget
+            h3.sectiontitle Findings:
+            table.reportcontent
+              tr
+                td
+                  p #{findings}
+
+    footer
+      p &nbsp;&nbsp;Page 1/1
+
+  script.
+    $( document ).ready(function() {
+      var today = new Date();
+      console.log(today);
+      $("#today").html("Date:&nbsp" + today.toDateString());
+    });

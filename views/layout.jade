@@ -1,0 +1,42 @@
+doctype
+html
+  head
+    title #{title} - Philips Healthtech
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/popup.css')
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js')
+    script(src='/scripts/scriptcam/scriptcam.js')
+    script(src='/scripts/dictation.js')
+    script(src='/scripts/index.js')
+  body
+    header
+      img(id='philips_logo', src='/images/philips.png')
+      h1 Virginia Demo - Web
+
+    .container
+      .main-content
+        block content
+
+    footer
+      div(class="notepad-heading")
+        div(class="notepad-heading-before")
+        h1(class="notepad-heading-h1") Notes:
+        div(class="notepad-heading-after")
+      textarea(class="notepad" id='virginiain', name='sendText', rows=7)
+      div(class="notepad-actions")
+        div.actionbar
+          img.actionbutton(id="camera" src="/images/camera.png" data-popup-open="camera-popup")
+          div.divider
+          img(id="speech" src="/images/recorder.png" onclick="dictate()")
+          div.divider
+          img(id="process" src="/images/save.png")
+
+      div(class="notepad-shadow")
+      p &nbsp;&nbsp;&copy; Copyright 2016 Philips Healthtech
+
+      div.popup(data-popup="camera-popup")
+        div.popup-inner
+          div(id='webcam')
+          a.popup-close(data-popup-close="camera-popup") X
+      div.loading

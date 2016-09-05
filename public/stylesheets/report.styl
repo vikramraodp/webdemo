@@ -1,0 +1,99 @@
+*
+ * Import nib
+ */
+@import 'nib'
+
+/*
+ * Grab a custom font from Google
+ */
+@import url('http://fonts.googleapis.com/css?family=Quicksand')
+
+/*
+ * Nib provides a CSS reset
+ */
+global-reset()
+
+/*
+ * Store the main color and
+ * background color as variables
+ */
+main-color = #a2bcff
+background-color = #faf9f0
+
+html
+  height 100%
+
+body
+  font-family 'Georgia'
+  background-color background-color
+  color #444
+  height 100%
+
+header
+  font-family 'Quicksand'
+  padding 5px 10px
+  color #000
+  font-size 16px
+  font-weight bold
+  text-align left
+  display -webkit-box
+  border-bottom 2px solid #617c90
+  border-color rgba(0, 0, 0, 0.35)
+
+.container
+  width 100%
+  height 70%
+  overflow hidden
+
+.main-content
+  float left
+  width 100%
+  min-height 100%
+
+.displayarea
+  float middle
+  width 70%
+  height 80%
+
+.widget
+  border-radius 3px
+  border 1px solid #ccc
+  //margin-left 20px
+  background-color #eee
+  box-shadow inset 0px 0px 0px 3px rgba(#fff, 0.8), 0px 3px 0px -2px rgba(#000, 0.1)
+
+footer
+  position fixed
+  width 100%
+  border-top 1px solid #617c90
+  border-color rgba(0, 0, 0, 0.35)
+  font-size 12px
+  text-align left
+  bottom 0px
+  font-style italic
+
+#today
+  vertical-align middle
+  font-size 18px
+  font-weight bold
+
+.reportheader
+  width 100%
+  height auto
+
+.sectiontitle
+  padding-left 10px
+
+.reportcontent
+  text-align right
+  font-size 20px
+  padding-left 30px
+  text-align middle
+  border-spacing 5px
+
+  //td
+  //  padding 5px
+
+
+.datedisplay
+  text-align right
