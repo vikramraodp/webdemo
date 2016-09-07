@@ -43,7 +43,7 @@ app.get('/', function (req, res) {
 app.use(errorHandler);
 
 var monologue_svc = function(text, seed) {
-  var res = request('POST', 'http://52.76.50.70/virginia/monologue', {
+  var res = request('POST', 'http://api.virginia.net.in/monologue', {
     json: { monologue: text, seed: seed }
   });
   var result = JSON.parse(res.getBody('utf8'));
