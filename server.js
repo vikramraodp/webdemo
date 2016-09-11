@@ -52,7 +52,7 @@ var monologue_svc = function(text, seed) {
 
 var generate_report_string = function(text) {
   var pat_info = monologue_svc(text,'pat_registration');
-  var clinical_info = monologue_svc(text,'clinical');
+  var clinical_info = monologue_svc(text,'clinicalv2');
 
   var report_string = '';
 
