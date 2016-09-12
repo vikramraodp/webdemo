@@ -106,7 +106,11 @@ app.get('/generate', function (req, res) {
       address: req.query.address,
       signs_symptoms: req.query.symptoms,
       current_medication: req.query.medication,
-      findings: req.query.findings
+      findings: req.query.findings,
+      patient_history: req.query.patienthistory,
+      family_history: req.query.familyhistory,
+      procedures: req.query.procedures,
+      lab_events: req.query.labevents
     }
   )
 })

@@ -55,11 +55,39 @@ html
                   p #{signs_symptoms}
 
           .widget
-            h3.sectiontitle Current Medication:
+            h3.sectiontitle Medication:
             table.reportcontent
               tr
                 td
                   p #{current_medication}
+
+          .widget
+            h3.sectiontitle Medical History:
+            table.reportcontent
+              tr
+                td
+                  p #{patient_history}
+
+          .widget
+            h3.sectiontitle Family History:
+            table.reportcontent
+              tr
+                td
+                  p #{family_history}
+
+          .widget
+            h3.sectiontitle Investigations:
+            table.reportcontent
+              tr
+                td
+                  p Procedures:
+                td
+                  p #{procedures}
+              tr
+                td
+                  p Lab Investigations:
+                td
+                  p #{lab_events}
 
           .widget
             h3.sectiontitle Findings:
