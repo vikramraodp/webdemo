@@ -35,6 +35,10 @@ var errorHandler = function(err, req, res, next){
 };
 
 app.get('/', function (req, res) {
+  res.render('virginia', {} )
+})
+
+app.get('/raw', function (req, res) {
   res.render('index',
   { title : 'Virginia Demo - Web', action: 'reject' }
   )

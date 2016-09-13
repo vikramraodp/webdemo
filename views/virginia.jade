@@ -1,0 +1,87 @@
+doctype html
+html
+  head
+    title Virginia Web Demo - Philips HealthTech
+    link(rel='shortcut icon', href='/favicon.ico')
+    link(rel='stylesheet', href='/stylesheets/virginia/style.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/virginia/screen.css')
+    link(rel='stylesheet', type='text/css', href='/stylesheets/virginia/css')
+    link(rel='stylesheet', href='/stylesheets/popup.css')
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js')
+    script(src='/scripts/scriptcam/scriptcam.js')
+    script(src='/scripts/dictation.js')
+    script(src='/scripts/index.js')
+    style#fit-vids-style.
+      .fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}
+  body.nav-closed
+    div.virginia-page-header
+      #particles-js
+        canvas.particles-js-canvas-el(style='width: 100%; height: 100%;')
+      script(src='/scripts/virginia/particles.min.js')
+      script(src='/scripts/virginia/particles.js')
+      .site-wrapper
+        header.main-header
+          .vertical
+            .main-header-content.inner
+              h1.page-title
+                a.btn-bootstrap-2.title-scroll(href='http://www.virginia.net.in/') Virginia
+              p
+              h2.page-description Changing the way you interact with computers
+    div.virginia-page-content
+      div.virginia-content-title
+        h1 Medical Report:
+      div.virginia-content-content
+        div.virginia-content-left
+          div.loading
+          object(id="report" data="report" type="application/pdf")
+        div.virginia-content-right
+          div(style="width: 100%; height: 60%; overflow:hidden;")
+            div.notepad-heading
+              div.notepad-heading-before
+              h1.notepad-heading-h1 Notes
+              div.notepad-heading-after
+            textarea.notepad#virginiain(name='sendText', rows=10, wrap='hard')
+            div.notepad-shadow
+            div.notepad-actions
+              div(style="width:85%; float: left;")
+              div(style="width:15%; float:right;")
+                img.actionbutton(id="camera" src="/images/camera.png" data-popup-open="camera-popup" text-align="right")
+                div.divider
+                img(id="speech" src="/images/recorder.png" onclick="dictate()")
+                div.divider
+                img(id="process" src="/images/save.png")
+
+          div(style="width: 100%; height: auto; overflow:hidden;")
+            // Carousel Slideshow
+            #virginia-carousel.carousel.slide(data-ride='carousel')
+              // Carousel Indicators
+              ol.carousel-indicators
+                li.active(data-target='#virginia-carousel', data-slide-to='0')
+                li(data-target='#virginia-carousel', data-slide-to='1')
+                li(data-target='#virginia-carousel', data-slide-to='2')
+              // End Carousel Indicators
+              // Carousel Images
+              .carousel-inner
+                .item.active
+                  img(src='/images/virginia/slideshow/virginia1.jpg')
+                .item
+                  img(src='/images/virginia/slideshow/virginia2.jpg')
+                .item
+                  img(src='/images/virginia/slideshow/virginia3.jpg')
+              // End Carousel Images
+            // End Carousel Slideshow
+
+    div.popup(data-popup="camera-popup")
+      div.popup-inner
+        div(id='webcam')
+        a.popup-close(data-popup-close="camera-popup") X
+
+
+    script(type='text/javascript', src='/scripts/virginia/jquery.js')
+    script(type='text/javascript', src='/scripts/virginia/jquery.fitvids.js')
+    script(type='text/javascript', src='/scripts/virginia/index.js')
+    script(data-no-instant='').
+      document.write('<script src="/scripts/virginia/livereload.js?mindelay=10"></' + 'script>')
+    script(src='/scripts/virginia/livereload.js')
+    script(src='/scripts/virginia/bootstrap.min.js')
