@@ -42,6 +42,10 @@ app.get('/', function (req, res) {
 
 app.use(errorHandler);
 
+String.prototype.capitalize = function() {
+    return this.charAt(0).toUpperCase() + this.slice(1);
+}
+
 var monologue_svc = function(text, seed) {
   var res = request('POST', 'http://api.virginia.net.in/monologue', {
     json: { monologue: text, seed: seed }
@@ -98,11 +102,24 @@ app.post('/report', function (req, res) {
 })
 
 app.get('/generate', function (req, res) {
+
+  var age_unit = req.query.age_unit;
+  if(age_unit) {
+    if(!age_unit.endsWith("s")) {
+      age_unit += "s";
+    }
+  }
+
+  var gender = req.query.gender;
+  if(gender) {
+    gender = gender.capitalize();
+  }
+
   res.render('report',
     { first_name : req.query.first_name,
       last_name: req.query.last_name,
       age: req.query.age,
-      gender: req.query.gender,
+      gender: gender,
       address: req.query.address,
       signs_symptoms: req.query.symptoms,
       current_medication: req.query.medication,
@@ -110,7 +127,8 @@ app.get('/generate', function (req, res) {
       patient_history: req.query.patienthistory,
       family_history: req.query.familyhistory,
       procedures: req.query.procedures,
-      lab_events: req.query.labevents
+      lab_events: req.query.labevents,
+      age_unit: age_unit
     }
   )
 })
