@@ -114,15 +114,46 @@ app.get('/generate', function (req, res) {
     }
   }
 
+  var age = req.query.age;
+  var age_int = parseInt(age);
+  if(isNaN(age_int)) {
+    age = "";
+  } else {
+    if(age_int > 140) {
+      age = "";
+    }
+  }
+
+  if(age.length == 0) {
+    age_unit = "";
+  }
+
   var gender = req.query.gender;
   if(gender) {
-    gender = gender.capitalize();
+    if(!(gender.toUpperCase() == 'MALE' ||
+          gender.toUpperCase() == 'FEMALE' ||
+          gender.toUpperCase() == 'OTHERS')) {
+            if(gender.toUpperCase() == 'MR.' ||
+                gender.toUpperCase() == 'GENTLEMAN' ||
+                gender.toUpperCase() == 'MAN') {
+                  gender = 'Male';
+            }
+            if(gender.toUpperCase() == 'MS.' ||
+                gender.toUpperCase() == 'MRS.' ||
+                gender.toUpperCase() == 'WOMAN' ||
+                gender.toUpperCase() == 'LADY') {
+                  gender = 'Female';
+            }
+            gender = "";
+    } else {
+      gender = gender.capitalize();
+    }
   }
 
   res.render('report',
     { first_name : req.query.first_name,
       last_name: req.query.last_name,
-      age: req.query.age,
+      age: age,
       gender: gender,
       address: req.query.address,
       signs_symptoms: req.query.symptoms,
