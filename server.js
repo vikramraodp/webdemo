@@ -137,14 +137,14 @@ app.get('/generate', function (req, res) {
                 gender.toUpperCase() == 'GENTLEMAN' ||
                 gender.toUpperCase() == 'MAN') {
                   gender = 'Male';
-            }
-            if(gender.toUpperCase() == 'MS.' ||
+            } else if(gender.toUpperCase() == 'MS.' ||
                 gender.toUpperCase() == 'MRS.' ||
                 gender.toUpperCase() == 'WOMAN' ||
                 gender.toUpperCase() == 'LADY') {
                   gender = 'Female';
+            } else {
+              gender = "";
             }
-            gender = "";
     } else {
       gender = gender.capitalize();
     }
