@@ -5,6 +5,7 @@ $(document).ready(function(){
 
   $("#process").click(function(e){
       e.preventDefault();
+      $(".loading").show();
       $.ajax({type: "POST",
               url: "/report",
               dataType: 'json',
@@ -18,6 +19,7 @@ $(document).ready(function(){
                 }, 3000);
               },
               error: function(xhr, status, error) {
+                $(".loading").hide();
                 alert('Error');
               }});
       });
