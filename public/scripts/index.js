@@ -12,7 +12,7 @@ $(document).ready(function(){
               success:function(result){
                 $(".loading").show();
                 $("#report").replaceWith('<object id="report" data="'+ result.url + '" type="application/pdf"></object>');
-                $("#virginiain").val('')
+                //$("#virginiain").val('')
                 setTimeout(function () {
                   $(".loading").hide();
                 }, 3000);
